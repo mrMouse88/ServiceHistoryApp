@@ -1,5 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
-    const Events = sequelize.define("Events", {
+    const Entries = sequelize.define("Entries", {
         date: {
             type: DataTypes.DATE,
             allowNull: false
@@ -17,5 +17,5 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: true
         }
     })
-    return Events
+    return Entries
 }
