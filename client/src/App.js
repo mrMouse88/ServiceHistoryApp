@@ -1,11 +1,9 @@
-import './App.css';
+import React from "react";
+//components
+import Entries from "./components/Entries";
 
 function App() {
-  return (
-    <div>
-      <h1>Hello</h1>
-    </div>
-  );
+	return <Entries />;
 }
 
 export default App;
