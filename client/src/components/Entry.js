@@ -15,23 +15,6 @@ import {
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 function Entry({ entry }) {
-	const parts = [];
-	// const parts = [
-	// 	{
-	// 		id: 1,
-	// 		name: "Olej 5W40",
-	// 		number: "",
-	// 		price: "134,00",
-	// 		description: "6 litrów",
-	// 	},
-	// 	{
-	// 		id: 2,
-	// 		name: "filtr oleju",
-	// 		number: "Knecht 46D/1",
-	// 		price: "36,50",
-	// 		description: "z uszczelką pokrywy filtra i śruby spustowej",
-	// 	},
-	// ];
 	return (
 		<Accordion>
 			<AccordionSummary expandIcon={<ExpandMoreIcon />}>
@@ -48,9 +31,9 @@ function Entry({ entry }) {
 				<Typography variant="h6">Opis</Typography>
 				<Typography>{entry.description}</Typography>
 
-				{Array.isArray(parts) && parts.length ? (
+				{Array.isArray(entry.Parts) && entry.Parts.length ? (
 					<Box mt={3}>
-						<Parts parts={parts} />
+						<Parts parts={entry.Parts} />
 					</Box>
 				) : (
 					<span />

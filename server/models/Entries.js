@@ -1,3 +1,5 @@
+const Parts = require("./Parts");
+
 module.exports = (sequelize, DataTypes) => {
 	const Entries = sequelize.define("Entries", {
 		date: {
@@ -17,5 +19,12 @@ module.exports = (sequelize, DataTypes) => {
 			allowNull: true,
 		},
 	});
+
+	Entries.associate = (models) => {
+		Entries.hasMany(models.Parts, {
+			onDelete: "cascade",
+		});
+	};
+
 	return Entries;
 };

@@ -1,9 +1,9 @@
 const express = require("express");
 const router = express.Router();
-const { Entries } = require("../models");
+const { Entries, Parts } = require("../models");
 
 router.get("/", async (req, res) => {
-	const entries = await Entries.findAll();
+	const entries = await Entries.findAll({ include: Parts });
 	res.json(entries);
 });
 
