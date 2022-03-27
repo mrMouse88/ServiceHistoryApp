@@ -1,0 +1,11 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	/* background-image: url("https://img.freepik.com/free-photo/old-cement-wall-texture_1149-1280.jpg?t=st=1648075626~exp=1648076226~hmac=3c3b9f7476526dc8115ee52cd94afd06d7c47760d903040cc973eb35f2a7c754&w=1060");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover; */
+	background-color: lightgray;
+}

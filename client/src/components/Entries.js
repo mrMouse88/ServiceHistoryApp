@@ -5,6 +5,9 @@ import { useEffect, useState } from "react";
 //components
 import Entry from "./Entry";
 
+//materialUI
+import { Stack } from "@mui/material";
+
 function Entries() {
 	const [listOfEntries, setListOfEntries] = useState([]);
 	useEffect(() => {
@@ -13,11 +16,11 @@ function Entries() {
 		});
 	});
 	return (
-		<div>
+		<Stack spacing="{2}">
 			{listOfEntries.map((entry, key) => {
 				return <Entry key={key} entry={entry} />;
 			})}
-		</div>
+		</Stack>
 	);
 }
 

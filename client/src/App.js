@@ -5,12 +5,19 @@ import "./App.css";
 import Entries from "./components/Entries";
 
 //materialUI
-import { AppBar, Toolbar, Container, Typography, Button } from "@mui/material";
+import {
+	AppBar,
+	Toolbar,
+	Box,
+	Container,
+	Typography,
+	Button,
+} from "@mui/material";
 
 function App() {
 	return (
 		<>
-			<AppBar>
+			<AppBar position="static">
 				<Toolbar>
 					<Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
 						Ksiąka serwisowa
@@ -18,9 +25,11 @@ function App() {
 					<Button color="inherit">Dodaj wpis</Button>
 				</Toolbar>
 			</AppBar>
-			<Container maxWidth="md">
-				<Entries />
-			</Container>
+			<Box mt={3}>
+				<Container maxWidth="md">
+					<Entries />
+				</Container>
+			</Box>
 		</>
 	);
 }
